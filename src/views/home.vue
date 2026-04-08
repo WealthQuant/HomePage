@@ -179,17 +179,18 @@ const { t } = useI18n()
 
   .text {
     position: absolute;
-    font-family: ArialRoundedMTBold, "Microsoft YaHei", sans-serif;
-    font-weight: 600;
-    color: #333;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'SF Pro Display', 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    font-weight: 500;
+    color: #1a1a2e;
     text-align: left;
+    letter-spacing: -0.01em;
 
     &-top {
       top: 0.88rem;
       left: 25%;
       width: 63%;
-      font-size: 0.4rem;
-      line-height: 0.5rem;
+      font-size: 0.36rem;
+      line-height: 1.3;
     }
 
     &-bottom {
@@ -203,8 +204,8 @@ const { t } = useI18n()
       right: 25%;
       width: 63%;
       text-align: right;
-      font-size: 0.4rem;
-      line-height: 0.5rem;
+      font-size: 0.36rem;
+      line-height: 1.3;
     }
 
     &-bottom-right {
@@ -217,30 +218,35 @@ const { t } = useI18n()
 
   .text-min {
     position: absolute;
-    font-family: ArialRoundedMTBold, "Microsoft YaHei", sans-serif;
-    font-weight: 600;
-    color: #333;
-    font-size: 0.28rem;
-    line-height: 0.32rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'SF Pro Display', 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    font-weight: 400;
+    color: #4a4a5e;
+    font-size: 0.22rem;
+    line-height: 1.5;
   }
 }
 
 // Section 2 specific
 .img2 {
-  height: 43.75vw;
-  overflow: hidden;
+  min-height: 43.75vw;
+  overflow: visible;
 
   .bg-full {
-    height: 100%;
+    height: auto;
+    min-height: 43.75vw;
+    object-fit: cover;
   }
 
   .overlay-people {
     position: absolute;
-    top: -7.8vw;
-    left: 10%;
-    width: 58.3%;
-    height: 60.1vw;
+    top: -5vw;
+    left: 5%;
+    width: 50%;
+    max-width: 700px;
+    height: auto;
     z-index: 2;
+    object-fit: contain;
+    filter: drop-shadow(0 0.2rem 0.4rem rgba(0, 0, 0, 0.15));
   }
 }
 
@@ -335,18 +341,19 @@ const { t } = useI18n()
 }
 
 .product-title {
-  font-size: 0.4rem;
-  font-family: ArialRoundedMTBold, "Microsoft YaHei", sans-serif;
+  font-size: 0.36rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'SF Pro Display', 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
   color: #fff;
   font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 .product-desc {
   width: 83%;
-  font-size: 0.17rem;
-  font-family: ArialRoundedMTBold, "Microsoft YaHei", sans-serif;
+  font-size: 0.16rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'SF Pro Display', 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
   color: rgba(255, 255, 255, 0.9);
-  line-height: 0.28rem;
+  line-height: 1.6;
   margin-left: 8%;
   text-align: left;
   position: relative;
@@ -385,14 +392,15 @@ const { t } = useI18n()
 }
 
 .section-title {
-  font-size: 0.4rem;
-  line-height: 0.5rem;
-  font-family: ArialRoundedMTBold, "Microsoft YaHei", sans-serif;
-  color: #333;
+  font-size: 0.36rem;
+  line-height: 1.2;
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'SF Pro Display', 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  color: #1a1a2e;
   text-align: left;
   font-weight: 600;
   margin-left: 12.5%;
   margin-top: 12.5vw;
+  letter-spacing: -0.02em;
 
   &.sub-title {
     margin-top: 5vw;
@@ -431,22 +439,24 @@ const { t } = useI18n()
   margin-left: 2.5vw;
 
   h4 {
-    font-size: 0.24rem;
+    font-size: 0.22rem;
     width: 60%;
-    font-family: ArialRoundedMTBold, "Microsoft YaHei", sans-serif;
-    color: #333;
-    line-height: 0.28rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'SF Pro Display', 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    color: #1a1a2e;
+    line-height: 1.3;
     margin-top: 0;
     text-align: left;
+    font-weight: 600;
+    letter-spacing: -0.01em;
   }
 
   p {
     margin-top: 1.4vw;
     width: 60%;
-    font-size: 0.14rem;
-    font-family: ArialRoundedMTBold, "Microsoft YaHei", sans-serif;
-    color: #666;
-    line-height: 0.18rem;
+    font-size: 0.15rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'SF Pro Display', 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    color: #5a5a6e;
+    line-height: 1.6;
     text-align: left;
   }
 }
@@ -456,16 +466,18 @@ const { t } = useI18n()
   margin-top: 3vw;
 
   h4 {
-    font-size: 0.24rem;
-    color: #333;
+    font-size: 0.22rem;
+    color: #1a1a2e;
     margin-bottom: 0.16rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
   }
 
   p {
     width: 75%;
-    font-size: 0.14rem;
-    color: #666;
-    line-height: 0.22rem;
+    font-size: 0.15rem;
+    color: #5a5a6e;
+    line-height: 1.6;
   }
 }
 
@@ -565,9 +577,10 @@ const { t } = useI18n()
   bottom: 0.2rem;
   width: 100%;
   text-align: center;
-  font-size: 0.12rem;
-  color: #fff;
-  line-height: 0.2rem;
+  font-size: 0.13rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'SF Pro Display', 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
 
   p {
     margin-bottom: 0.08rem;
