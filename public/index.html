@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="财富量化,财富,量化, WealthQuant, Wealth, Quant">
+    <meta name="description" content="WealthQuant致力于构建基于人工智能的普惠投资全方位解决方案，为投资者提供在房产、股市和藏品投资中数据、投研、风险、业绩归因的一体化资产量化管理平台。">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>WealthQuant 财富量化</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
+<script>
+  fnResize();
+  window.onresize = function () {
+    fnResize();
+  }
+  function fnResize () {
+    let deviceWidth = document.documentElement.clientWidth || window.innerWidth
+    if (deviceWidth >= 750) {
+      deviceWidth = 750;
+    }
+    if (deviceWidth <= 320) {
+      deviceWidth = 320;
+    }
+    document.documentElement.style.fontSize = (deviceWidth / 7.5) + 'px'
+  }
+</script>
+<style>
+  body {
+    width: 100%;
+    height: 100%;
+    margin: 0
+  }
+  html, body {
+    height: 100%;
+    margin: 0;
+    /* background-color: #000; */
+    /* min-width: 1300px; */
+  }
+  #app {
+    width: 100%;
+    height: 100%;
+  }
+</style>

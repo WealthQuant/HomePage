@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "title": "WealthQuant 财富量化 - 量化投资平台",
+    "description": "基于人工智能的量化投资解决方案，涵盖房产、股票和收藏品投资"
+  },
+  "nav": {
+    "houseQuant": "房产量化",
+    "stockQuant": "股票量化",
+    "collectibleQuant": "藏品量化",
+    "about": "关于我们"
+  },
+  "hero": {
+    "slogan": "量化财富，促进财富增长",
+    "cta": "立即开始"
+  },
+  "mission": {
+    "statement": "对你重要的事，对我们也很重要",
+    "subtitle": "我们的使命是让投资对每个人都公平",
+    "description": "通过自动化提供优质建议，我们能够帮助更多人实现财富增长",
+    "aiDescription": "我们的人工智能帮助你的顾问确定你在承担较低风险的同时获得较高回报的方法"
+  },
+  "products": {
+    "title": "我们的产品",
+    "houseQuant": {
+      "name": "房产量化",
+      "description": "我们将定量革命带入房地产投资。今天的房地产投资往往是基于不完整和不充分的信息。",
+      "details": "我们致力于改善房地产决策。它可以而且应该以证据为基础，以数据为驱动，并且是系统性的。"
+    },
+    "stockQuant": {
+      "name": "股票量化",
+      "description": "致力于提供全方位的成长股分析和解读，集业绩超预期和技术分析于一体精准选股。",
+      "features": [
+        "利用人工智能的力量最大限度地提高你的收益",
+        "自动交易，充分利用时间和资本",
+        "有纪律和无情绪的交易"
+      ]
+    },
+    "collectibleQuant": {
+      "name": "藏品量化",
+      "description": "民间古代艺术品是中国文化最具代表性的标志和载体。借助AI、区块链和物联网技术，我们提供全面的数字孪生、藏品追踪、鉴定和估价量化服务。"
+    }
+  },
+  "whyUs": {
+    "title": "为什么选择我们",
+    "researchDriven": {
+      "title": "研究驱动",
+      "description": "我们的方法基于基本金融原则、严格的定量研究与经过测试的模型和策略。"
+    },
+    "aiBigData": {
+      "title": "人工智能与大数据",
+      "description": "在谷歌、微软和百度有近10年的大规模开发大数据、自然语言处理（NLP）和机器学习的经验。"
+    },
+    "engineering": {
+      "title": "世界一流工程",
+      "description": "数十年的综合工程经验，以每天数十亿次搜索查询的规模开发信息和商务平台。"
+    }
+  },
+  "about": {
+    "title": "我们是谁",
+    "companyTitle": "关于财富量化",
+    "description": "WealthQuant成立于2021年。创始团队曾在百度、阿里巴巴和金融公司工作，在建立关键任务的机器学习系统方面有良好的记录。",
+    "backgrounds": "我们的背景"
+  },
+  "footer": {
+    "legal": "法律信息",
+    "privacy": "隐私条款",
+    "terms": "使用须知",
+    "cardholder": "使用协议",
+    "copyright": "版权所有 © 2021-{year} 财富量化"
+  },
+  "accessibility": {
+    "skipToMain": "跳转到主要内容",
+    "menu": "菜单",
+    "closeMenu": "关闭菜单",
+    "languageSelector": "语言选择器",
+    "socialLinks": "社交媒体链接"
+  }
+}

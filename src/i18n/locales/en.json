@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "title": "WealthQuant - Quantitative Investment Platform",
+    "description": "AI-powered quantitative investment solutions for real estate, stocks, and collectibles"
+  },
+  "nav": {
+    "houseQuant": "HouseQuant",
+    "stockQuant": "StockQuant",
+    "collectibleQuant": "CollectibleQuant",
+    "about": "About"
+  },
+  "hero": {
+    "slogan": "Quant Wealth, Boost Wealth",
+    "cta": "Get Started"
+  },
+  "mission": {
+    "statement": "What Matters to You, Matters to Us",
+    "subtitle": "We're on a mission to make investing fair for everyone",
+    "description": "By automating good advice, we're able to help more people achieve wealth",
+    "aiDescription": "Our AI helps your advisor identify ways for you to get a higher return while taking lower risk"
+  },
+  "products": {
+    "title": "Our Products",
+    "houseQuant": {
+      "name": "HouseQuant",
+      "description": "We're bringing the quantitative revolution to real estate investing. Property investing today is often based on incomplete and inadequate information.",
+      "details": "We work to improve real estate decision making. It can and should be evidence-based, data-driven, and systematic instead."
+    },
+    "stockQuant": {
+      "name": "StockQuant",
+      "description": "Committed to providing a full range of growth stock analysis and interpretation, with performance that exceeds expectations.",
+      "features": [
+        "Maximize Your Returns With Power of AI",
+        "Automate Your Trading To Make Best Use of Time And Capital",
+        "Disciplined and Emotion Free Trading"
+      ]
+    },
+    "collectibleQuant": {
+      "name": "CollectibleQuant",
+      "description": "Folk ancient artworks are the most representative markers and carriers of Chinese culture. With AI, blockchain, and IoT technologies, we provide comprehensive digital twin, tracing, identification and valuation services."
+    }
+  },
+  "whyUs": {
+    "title": "Why Us?",
+    "researchDriven": {
+      "title": "Research-Driven",
+      "description": "Our method is grounded in fundamental finance principles, rigorous quantitative research with tested models and strategies."
+    },
+    "aiBigData": {
+      "title": "Track Record in AI & Big Data",
+      "description": "Close to 10 years of experience developing big data, NLP and machine learning at Google, Microsoft and Baidu."
+    },
+    "engineering": {
+      "title": "World-class Engineering",
+      "description": "Decades of combined engineering know-how, developing platforms at the scale of billions of queries per day."
+    }
+  },
+  "about": {
+    "title": "Who We Are",
+    "companyTitle": "About WealthQuant",
+    "description": "WealthQuant was founded in 2021. Our founding team worked at Baidu, Alibaba and financial firms with proven track records in building mission-critical machine learning systems.",
+    "backgrounds": "Our Backgrounds"
+  },
+  "footer": {
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "cardholder": "Cardholder Agreements",
+    "copyright": "Copyright © 2021-{year} WealthQuant. All Rights Reserved."
+  },
+  "accessibility": {
+    "skipToMain": "Skip to main content",
+    "menu": "Menu",
+    "closeMenu": "Close menu",
+    "languageSelector": "Language selector",
+    "socialLinks": "Social media links"
+  }
+}
