@@ -180,49 +180,54 @@ const { t } = useI18n()
   .text {
     position: absolute;
     font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'SF Pro Display', 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     color: #1a1a2e;
     text-align: left;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
 
     &-top {
-      top: 0.88rem;
-      left: 25%;
-      width: 63%;
-      font-size: 0.36rem;
-      line-height: 1.3;
+      top: 0.48rem;
+      left: 28%;
+      width: 60%;
+      font-size: 0.28rem;
+      line-height: 1.4;
+      animation: fadeInDown 1s ease-out;
     }
 
     &-bottom {
-      bottom: 0.88rem;
-      left: 25%;
-      width: 63%;
+      bottom: 0.48rem;
+      left: 28%;
+      width: 60%;
+      animation: fadeInUp 1s ease-out 0.3s both;
     }
 
     &-top-right {
-      top: 1.52rem;
-      right: 25%;
-      width: 63%;
+      top: 0.64rem;
+      right: 28%;
+      width: 60%;
       text-align: right;
-      font-size: 0.36rem;
-      line-height: 1.3;
+      font-size: 0.28rem;
+      line-height: 1.4;
+      animation: fadeInDown 1s ease-out;
     }
 
     &-bottom-right {
-      bottom: 1.52rem;
-      right: 25%;
-      width: 63%;
+      bottom: 0.64rem;
+      right: 28%;
+      width: 60%;
       text-align: right;
+      animation: fadeInUp 1s ease-out 0.3s both;
     }
   }
 
   .text-min {
     position: absolute;
     font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'SF Pro Display', 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
-    font-weight: 400;
-    color: #4a4a5e;
-    font-size: 0.22rem;
-    line-height: 1.5;
+    font-weight: 500;
+    color: #FF501E;
+    font-size: 0.20rem;
+    line-height: 1.4;
+    animation: colorPulse 3s ease-in-out infinite;
   }
 }
 
@@ -603,6 +608,38 @@ const { t } = useI18n()
       height: 0.14rem;
       margin-right: 0.04rem;
     }
+  }
+}
+
+// Animations
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes colorPulse {
+  0%, 100% {
+    color: #FF501E;
+  }
+  50% {
+    color: #0047AB;
   }
 }
 
