@@ -1,37 +1,85 @@
 <template>
   <div class="content">
     <!-- Section 1: Our Backgrounds -->
-    <div class="img1" data-aos="fade-up" data-aos-duration="1000">
+    <div
+      class="img1"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
       <span class="title">{{ t('about.backgrounds') }}</span>
       <div class="img1_content">
-        <p class="desc">{{ t('home.backgrounds.desc1') }}</p>
-        <p class="desc bold">{{ t('home.backgrounds.desc2') }}</p>
-        <p class="desc">{{ t('mission.statement') }}</p>
-        <p class="desc">{{ t('mission.subtitle') }}</p>
-        <p class="desc">{{ t('mission.description') }}</p>
-        <p class="desc small">{{ t('mission.aiDescription') }}</p>
+        <p class="desc">
+          {{ t('home.backgrounds.desc1') }}
+        </p>
+        <p class="desc bold">
+          {{ t('home.backgrounds.desc2') }}
+        </p>
+        <p class="desc">
+          {{ t('mission.statement') }}
+        </p>
+        <p class="desc">
+          {{ t('mission.subtitle') }}
+        </p>
+        <p class="desc">
+          {{ t('mission.description') }}
+        </p>
+        <p class="desc small">
+          {{ t('mission.aiDescription') }}
+        </p>
       </div>
     </div>
 
     <!-- Section 2: Products -->
-    <div class="img2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+    <div
+      class="img2"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-delay="100"
+    >
       <div class="img2_content">
-        <div class="product-card" data-aos="fade-right" data-aos-delay="200" @click="goToProduct('house')">
-          <img src="../assets/25.png" class="product-bg" alt="HouseQuant">
+        <div
+          class="product-card"
+          data-aos="fade-right"
+          data-aos-delay="200"
+          @click="goToProduct('house')"
+        >
+          <img
+            src="../assets/25.png"
+            class="product-bg"
+            alt="HouseQuant"
+          >
           <div class="product-info">
             <h3>{{ t('products.houseQuant.name') }}</h3>
             <p>{{ t('products.houseQuant.description') }}</p>
           </div>
         </div>
-        <div class="product-card" data-aos="fade-up" data-aos-delay="300" @click="goToProduct('stock')">
-          <img src="../assets/26.png" class="product-bg" alt="StockQuant">
+        <div
+          class="product-card"
+          data-aos="fade-up"
+          data-aos-delay="300"
+          @click="goToProduct('stock')"
+        >
+          <img
+            src="../assets/26.png"
+            class="product-bg"
+            alt="StockQuant"
+          >
           <div class="product-info">
             <h3>{{ t('products.stockQuant.name') }}</h3>
             <p>{{ t('products.stockQuant.description') }}</p>
           </div>
         </div>
-        <div class="product-card" data-aos="fade-left" data-aos-delay="400" @click="goToProduct('collectible')">
-          <img src="../assets/27.png" class="product-bg" alt="CollectibleQuant">
+        <div
+          class="product-card"
+          data-aos="fade-left"
+          data-aos-delay="400"
+          @click="goToProduct('collectible')"
+        >
+          <img
+            src="../assets/27.png"
+            class="product-bg"
+            alt="CollectibleQuant"
+          >
           <div class="product-info">
             <h3>{{ t('products.collectibleQuant.name') }}</h3>
             <p>{{ t('products.collectibleQuant.description') }}</p>
@@ -41,21 +89,46 @@
     </div>
 
     <!-- Section 3: Why Us -->
-    <div class="img3" data-aos="fade-up" data-aos-duration="1000">
+    <div
+      class="img3"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
       <span class="title">{{ t('whyUs.title') }}</span>
       <div class="img3_content">
-        <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
-          <img src="../assets/code/001.png" alt="Track Record">
+        <div
+          class="feature-item"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <img
+            src="../assets/code/001.png"
+            alt="Track Record"
+          >
           <h4>{{ t('whyUs.aiBigData.title') }}</h4>
           <p>{{ t('whyUs.aiBigData.description') }}</p>
         </div>
-        <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
-          <img src="../assets/code/002.png" alt="Research-Driven">
+        <div
+          class="feature-item"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <img
+            src="../assets/code/002.png"
+            alt="Research-Driven"
+          >
           <h4>{{ t('whyUs.researchDriven.title') }}</h4>
           <p>{{ t('whyUs.researchDriven.description') }}</p>
         </div>
-        <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
-          <img src="../assets/code/003.png" alt="World-class Engineering">
+        <div
+          class="feature-item"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          <img
+            src="../assets/code/003.png"
+            alt="World-class Engineering"
+          >
           <h4>{{ t('whyUs.engineering.title') }}</h4>
           <p>{{ t('whyUs.engineering.description') }}</p>
         </div>
@@ -63,28 +136,63 @@
     </div>
 
     <!-- Section 4: Who We Are -->
-    <div class="img4" data-aos="fade-up" data-aos-duration="1000">
+    <div
+      class="img4"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
       <div class="img4_content">
-        <div class="text-content" data-aos="fade-right" data-aos-delay="200">
+        <div
+          class="text-content"
+          data-aos="fade-right"
+          data-aos-delay="200"
+        >
           <span class="title">{{ t('about.title') }}</span>
           <p>{{ t('about.description') }}</p>
         </div>
-        <div class="image-content" data-aos="fade-left" data-aos-delay="300">
-          <img src="../assets/image/people.png" alt="Who We Are">
+        <div
+          class="image-content"
+          data-aos="fade-left"
+          data-aos-delay="300"
+        >
+          <img
+            src="../assets/image/people.png"
+            alt="Who We Are"
+          >
         </div>
       </div>
     </div>
 
     <!-- Section 5: Contact / Target -->
-    <div class="img5" data-aos="fade-up" data-aos-duration="1000">
+    <div
+      class="img5"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
       <div class="img5_content">
-        <div class="image-content" data-aos="fade-right" data-aos-delay="200">
-          <img src="../assets/image/target.png" alt="Our Target">
+        <div
+          class="image-content"
+          data-aos="fade-right"
+          data-aos-delay="200"
+        >
+          <img
+            src="../assets/image/target.png"
+            alt="Our Target"
+          >
         </div>
-        <div class="text-content" data-aos="fade-left" data-aos-delay="300">
+        <div
+          class="text-content"
+          data-aos="fade-left"
+          data-aos-delay="300"
+        >
           <span class="title light">{{ t('hero.slogan') }}</span>
-          <p class="subtitle">{{ t('mission.statement') }}</p>
-          <div class="cta-button" @click="scrollToTop">
+          <p class="subtitle">
+            {{ t('mission.statement') }}
+          </p>
+          <div
+            class="cta-button"
+            @click="scrollToTop"
+          >
             {{ t('about.cta') }}
           </div>
         </div>
@@ -99,7 +207,9 @@
           <span>{{ t('footer.privacy') }}</span>
           <span>{{ t('footer.terms') }}</span>
         </div>
-        <div class="footer-brand">{{ t('footer.copyright', { year: new Date().getFullYear() }) }}</div>
+        <div class="footer-brand">
+          {{ t('footer.copyright', { year: new Date().getFullYear() }) }}
+        </div>
       </div>
     </div>
   </div>

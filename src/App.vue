@@ -5,14 +5,40 @@
         <Head />
       </div>
       <div class="home">
-        <img src="./assets/code/0001_iSpt.png" class="home_img" alt="WealthQuant Hero Background" data-aos="fade-in" data-aos-duration="1200">
+        <img
+          src="./assets/code/0001_iSpt.png"
+          class="home_img"
+          alt="WealthQuant Hero Background"
+          data-aos="fade-in"
+          data-aos-duration="1200"
+        >
         <div class="name">
-          <img src="./assets/code/0002x.png" class="name_bg" alt="WealthQuant Background" data-aos="fade-in" data-aos-delay="200">
-          <img src="./assets/code/0003.png" class="name_text" alt="WealthQuant Logo Text" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+          <img
+            src="./assets/code/0002x.png"
+            class="name_bg"
+            alt="WealthQuant Background"
+            data-aos="fade-in"
+            data-aos-delay="200"
+          >
+          <img
+            src="./assets/code/0003.png"
+            class="name_text"
+            alt="WealthQuant Logo Text"
+            data-aos="fade-up"
+            data-aos-delay="400"
+            data-aos-duration="1000"
+          >
         </div>
         <div class="code">
-          <span data-aos="fade-left" data-aos-delay="600">{{ t('hero.slogan') }} !</span>
-          <div class="content" data-aos="fade-left" data-aos-delay="800">
+          <span
+            data-aos="fade-left"
+            data-aos-delay="600"
+          >{{ t('hero.slogan') }} !</span>
+          <div
+            class="content"
+            data-aos="fade-left"
+            data-aos-delay="800"
+          >
             {{ contactPhone }}
           </div>
         </div>

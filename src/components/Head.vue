@@ -1,33 +1,58 @@
 <template>
-  <header class="head" :style="{'background': headC}" role="banner">
-    <a href="#main-content" class="skip-link">{{ t('accessibility.skipToMain') }}</a>
+  <header
+    class="head"
+    :style="{'background': headC}"
+    role="banner"
+  >
+    <a
+      href="#main-content"
+      class="skip-link"
+    >{{ t('accessibility.skipToMain') }}</a>
     <div class="head-container">
       <div class="left">
-        <div class="logo" role="img" :aria-label="t('nav.companyLogo')" @click="goHome"></div>
+        <div
+          class="logo"
+          role="img"
+          :aria-label="t('nav.companyLogo')"
+          @click="goHome"
+        />
       </div>
-      <div class="right" role="navigation" :aria-label="t('accessibility.languageSelector')">
+      <div
+        class="right"
+        role="navigation"
+        :aria-label="t('accessibility.languageSelector')"
+      >
         <button
           class="menu-btn"
           :style="{'color': icon}"
-          @click="toggleMenu(showMenu)"
           :aria-label="showMenu ? t('accessibility.closeMenu') : t('accessibility.menu')"
           :aria-expanded="showMenu"
           aria-controls="mobile-menu"
+          @click="toggleMenu(showMenu)"
         >
-          <i class="el-icon-s-unfold"></i>
+          <i class="el-icon-s-unfold" />
           <span class="menu-text">{{ t('accessibility.menu') }}</span>
         </button>
-        <div class="lang-switch" @click="toggleLanguage">
-          <span class="lang-option" :class="{ active: locale === 'zh' }">CN</span>
+        <div
+          class="lang-switch"
+          @click="toggleLanguage"
+        >
+          <span
+            class="lang-option"
+            :class="{ active: locale === 'zh' }"
+          >CN</span>
           <span class="lang-divider">|</span>
-          <span class="lang-option" :class="{ active: locale === 'en' }">EN</span>
+          <span
+            class="lang-option"
+            :class="{ active: locale === 'en' }"
+          >EN</span>
         </div>
       </div>
     </div>
     <nav
+      v-show="showMenu"
       id="mobile-menu"
       class="Menu"
-      v-show="showMenu"
       role="navigation"
       :aria-label="t('accessibility.menu')"
     >
@@ -38,12 +63,16 @@
           role="menuitem"
           tabindex="0"
           @keydown.enter="($event.target as HTMLElement).click()"
-        >{{ t(item.key) }}</li>
+        >
+          {{ t(item.key) }}
+        </li>
       </ul>
       <div class="Menu_icon">
-        <div class="blue icon_box">f</div>
+        <div class="blue icon_box">
+          f
+        </div>
         <div class="red icon_box">
-          <i class="el-icon-s-promotion"></i>
+          <i class="el-icon-s-promotion" />
         </div>
       </div>
     </nav>

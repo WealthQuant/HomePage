@@ -3,21 +3,30 @@
     <div class="detail-hero">
       <div class="container">
         <h1>{{ t('products.stockQuant.name') }}</h1>
-        <p class="lead">{{ t('products.stockQuant.description') }}</p>
+        <p class="lead">
+          {{ t('products.stockQuant.description') }}
+        </p>
       </div>
     </div>
     <div class="detail-content">
       <div class="container">
         <div class="feature-grid">
-          <div class="feature-card" v-for="(feature, idx) in features" :key="idx">
-            <i :class="feature.icon"></i>
+          <div
+            v-for="(feature, idx) in features"
+            :key="idx"
+            class="feature-card"
+          >
+            <i :class="feature.icon" />
             <h3>{{ feature.title }}</h3>
             <p>{{ feature.desc }}</p>
           </div>
         </div>
         <div class="cta-section">
-          <button class="btn-primary" @click="goBack">
-            <i class="el-icon-arrow-left"></i> {{ t('common.back') }}
+          <button
+            class="btn-primary"
+            @click="goBack"
+          >
+            <i class="el-icon-arrow-left" /> {{ t('common.back') }}
           </button>
         </div>
       </div>
