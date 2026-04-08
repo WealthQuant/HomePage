@@ -6,6 +6,21 @@ const routes: RouteRecordRaw[] = [
     path: '/',
     name: 'home',
     component: () => import('../views/home.vue')
+  },
+  {
+    path: '/products/house',
+    name: 'houseQuant',
+    component: () => import('../views/products/HouseQuant.vue')
+  },
+  {
+    path: '/products/stock',
+    name: 'stockQuant',
+    component: () => import('../views/products/StockQuant.vue')
+  },
+  {
+    path: '/products/collectible',
+    name: 'collectibleQuant',
+    component: () => import('../views/products/CollectibleQuant.vue')
   }
 ]
 

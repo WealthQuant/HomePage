@@ -7,24 +7,44 @@
     "houseQuant": "房产量化",
     "stockQuant": "股票量化",
     "collectibleQuant": "藏品量化",
-    "about": "关于我们"
+    "about": "关于我们",
+    "companyLogo": "财富量化 Logo"
   },
   "hero": {
-    "slogan": "量化财富，促进财富增长",
-    "cta": "立即开始"
+    "slogan": "量化财富，增长财富",
+    "cta": "立即开始",
+    "learnMore": "了解更多",
+    "scroll": "向下滚动",
+    "badge": "AI 驱动的投资平台",
+    "titleLine1": "量化投资",
+    "titleLine2": "普惠大众",
+    "description": "借助人工智能和大数据分析的力量，在房产、股票和藏品投资领域做出更明智的投资决策。",
+    "stat1": "年行业经验",
+    "stat2": "系统可用性",
+    "stat3": "专家支持"
   },
   "mission": {
+    "tag": "我们的使命",
     "statement": "对你重要的事，对我们也很重要",
     "subtitle": "我们的使命是让投资对每个人都公平",
-    "description": "通过自动化提供优质建议，我们能够帮助更多人实现财富增长",
-    "aiDescription": "我们的人工智能帮助你的顾问确定你在承担较低风险的同时获得较高回报的方法"
+    "description": "通过自动化提供优质建议，我们能够帮助更多人通过智能投资策略实现财富增长。",
+    "aiDescription": "我们的人工智能帮助你在承担较低风险的同时获得较高回报的方法。",
+    "statFounded": "成立年份",
+    "statProducts": "产品数量",
+    "statPossibilities": "无限可能"
   },
   "products": {
+    "tag": "我们的解决方案",
     "title": "我们的产品",
+    "subtitle": "由 AI 驱动的全方位量化投资解决方案",
     "houseQuant": {
       "name": "房产量化",
-      "description": "我们将定量革命带入房地产投资。今天的房地产投资往往是基于不完整和不充分的信息。",
-      "details": "我们致力于改善房地产决策。它可以而且应该以证据为基础，以数据为驱动，并且是系统性的。"
+      "description": "革命性的房地产投资管理平台，运用量化分析和 AI 驱动洞察，助您做出更明智的房产投资决策。",
+      "features": [
+        "AI 驱动的房产估值",
+        "市场趋势预测",
+        "投资组合优化"
+      ]
     },
     "stockQuant": {
       "name": "股票量化",
@@ -37,10 +57,16 @@
     },
     "collectibleQuant": {
       "name": "藏品量化",
-      "description": "民间古代艺术品是中国文化最具代表性的标志和载体。借助AI、区块链和物联网技术，我们提供全面的数字孪生、藏品追踪、鉴定和估价量化服务。"
+      "description": "全面的藏品数字孪生和估值平台，利用 AI 和区块链技术进行鉴定和追踪。",
+      "features": [
+        "AI 驱动的鉴定认证",
+        "数字孪生创建",
+        "区块链追踪溯源"
+      ]
     }
   },
   "whyUs": {
+    "tag": "为什么选择我们",
     "title": "为什么选择我们",
     "researchDriven": {
       "title": "研究驱动",
@@ -56,16 +82,28 @@
     }
   },
   "about": {
+    "tag": "关于我们",
     "title": "我们是谁",
     "companyTitle": "关于财富量化",
     "description": "WealthQuant成立于2021年。创始团队曾在百度、阿里巴巴和金融公司工作，在建立关键任务的机器学习系统方面有良好的记录。",
-    "backgrounds": "我们的背景"
+    "backgrounds": "我们的背景",
+    "cta": "联系我们"
+  },
+  "home": {
+    "backgrounds": {
+      "desc1": "有很多人和公司声称在你的财务问题上做正确的事情。",
+      "desc2": "不幸的是，这并不是我们大多数人的感觉。"
+    }
   },
   "footer": {
+    "tagline": "普惠大众的量化投资解决方案",
+    "products": "产品",
+    "company": "公司",
     "legal": "法律信息",
+    "careers": "加入我们",
+    "contact": "联系我们",
     "privacy": "隐私条款",
-    "terms": "使用须知",
-    "cardholder": "使用协议",
+    "terms": "使用条款",
     "copyright": "版权所有 © 2021-{year} 财富量化"
   },
   "accessibility": {

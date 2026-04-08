@@ -1,29 +1,28 @@
 <template>
   <header class="head" :style="{'background': headC}" role="banner">
     <a href="#main-content" class="skip-link">{{ t('accessibility.skipToMain') }}</a>
-    <div class="left">
-      <button
-        class="icon menu-btn"
-        :style="{'color': icon}"
-        @click="toggleMenu(showMenu)"
-        :aria-label="showMenu ? t('accessibility.closeMenu') : t('accessibility.menu')"
-        :aria-expanded="showMenu"
-        aria-controls="mobile-menu"
-      >
-        <i class="el-icon-more"></i>
-      </button>
-      <div class="logo" role="img" :aria-label="t('nav.companyLogo')"></div>
-    </div>
-    <div class="right" role="navigation" :aria-label="t('accessibility.languageSelector')">
-      <el-switch
-        class="switch"
-        v-model="value"
-        active-text="EN"
-        inactive-text="CN"
-        @change="switchLanguage"
-        :aria-label="t('accessibility.languageSelector')"
-      >
-      </el-switch>
+    <div class="head-container">
+      <div class="left">
+        <div class="logo" role="img" :aria-label="t('nav.companyLogo')" @click="goHome"></div>
+      </div>
+      <div class="right" role="navigation" :aria-label="t('accessibility.languageSelector')">
+        <button
+          class="menu-btn"
+          :style="{'color': icon}"
+          @click="toggleMenu(showMenu)"
+          :aria-label="showMenu ? t('accessibility.closeMenu') : t('accessibility.menu')"
+          :aria-expanded="showMenu"
+          aria-controls="mobile-menu"
+        >
+          <i class="el-icon-s-unfold"></i>
+          <span class="menu-text">{{ t('accessibility.menu') }}</span>
+        </button>
+        <div class="lang-switch" @click="toggleLanguage">
+          <span class="lang-option" :class="{ active: locale === 'zh' }">CN</span>
+          <span class="lang-divider">|</span>
+          <span class="lang-option" :class="{ active: locale === 'en' }">EN</span>
+        </div>
+      </div>
     </div>
     <nav
       id="mobile-menu"
@@ -54,15 +53,20 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { useRouter } from 'vue-router'
 import { MENU_ITEMS } from '@/constants'
 
 const { t, locale } = useI18n()
+const router = useRouter()
 
-const value = ref(true)
 const showMenu = ref(false)
 const icon = ref('#fff')
 const headC = ref('hsl(221, 100%, 37%)')
 const MenuList = MENU_ITEMS
+
+const goHome = () => {
+  router.push('/')
+}
 
 const toggleMenu = (isShow: boolean) => {
   showMenu.value = !isShow
@@ -75,8 +79,8 @@ const toggleMenu = (isShow: boolean) => {
   }
 }
 
-const switchLanguage = (val: boolean) => {
-  locale.value = val ? 'en' : 'zh'
+const toggleLanguage = () => {
+  locale.value = locale.value === 'zh' ? 'en' : 'zh'
 }
 </script>
 
@@ -104,36 +108,20 @@ const switchLanguage = (val: boolean) => {
   background: hsl(221, 100%, 37%);
   position: relative;
 
-  .left {
-    position: relative;
-    width: 50%;
+  .head-container {
+    max-width: 14rem;
+    margin: 0 auto;
     height: 100%;
-    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 .2rem;
+  }
 
-    .menu-btn {
-      width: .64rem;
-      height: .64rem;
-      line-height: .64rem;
-      font-size: .18rem;
-      position: absolute;
-      left: 0;
-      background: transparent;
-      border: none;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0;
-
-      &:focus {
-        outline: 2px solid #fff;
-        outline-offset: -4px;
-      }
-
-      i {
-        font-size: .18rem;
-      }
-    }
+  .left {
+    display: flex;
+    align-items: center;
+    height: 100%;
 
     .logo {
       width: 1.6rem;
@@ -142,80 +130,81 @@ const switchLanguage = (val: boolean) => {
       background-size: 90%;
       box-shadow: 0rem 0rem .16rem 0rem rgba(0, 0, 0, 0.1);
       border-radius: 2.12rem;
-      position: absolute;
-      left: .64rem;
-      top: .12rem;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.02);
+      }
     }
   }
 
   .right {
-    position: relative;
-    width: 50%;
+    display: flex;
+    align-items: center;
     height: 100%;
-    line-height: 100%;
-    float: right;
-    overflow: hidden;
+    gap: .16rem;
 
-    .switch {
-      position: absolute;
-      width: .96rem !important;
-      height: .32rem !important;
-      right: .16rem;
-      top: .16rem;
+    .menu-btn {
+      display: flex;
+      align-items: center;
+      gap: .06rem;
+      padding: .08rem .16rem;
+      background: rgba(255, 255, 255, 0.15);
+      border: none;
+      border-radius: .08rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      color: #fff;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.25);
+      }
+
+      i {
+        font-size: .16rem;
+      }
+
+      .menu-text {
+        font-size: .14rem;
+        font-weight: 500;
+      }
     }
 
-    :deep(.el-switch__core) {
-      width: .96rem !important;
-      height: .32rem !important;
-      line-height: .32rem;
+    .lang-switch {
+      display: flex;
+      align-items: center;
+      gap: .08rem;
+      padding: .06rem .12rem;
+      background: rgba(255, 255, 255, 0.15);
       border-radius: .16rem;
-      background: transparent !important;
-      border-color: transparent !important;
-    }
+      cursor: pointer;
+      transition: all 0.3s ease;
 
-    :deep(.el-switch__core:after) {
-      width: .32rem !important;
-      height: .32rem !important;
-      min-width: .32rem;
-      top: -.01rem;
-    }
+      &:hover {
+        background: rgba(255, 255, 255, 0.25);
+      }
 
-    :deep(.el-switch.is-checked .el-switch__core::after) {
-      margin-left: -.32rem;
-      top: -.01rem;
-    }
+      .lang-option {
+        font-size: .14rem;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.7);
+        padding: .02rem .08rem;
+        border-radius: .1rem;
+        transition: all 0.3s ease;
 
-    :deep(.el-switch__label--right) {
-      margin-left: -.27rem;
-      z-index: 1;
-      color: #ffffff;
-      font-weight: 600;
-      font-size: .14rem !important;
-    }
+        &.active {
+          color: #0047AB;
+          background: #fff;
+          font-weight: 600;
+        }
+      }
 
-    :deep(.el-switch__label--left) {
-      margin-right: -.27rem;
-      z-index: 1;
-      color: #ffffff;
-      font-weight: 600;
-      font-size: .14rem !important;
+      .lang-divider {
+        font-size: .12rem;
+        color: rgba(255, 255, 255, 0.4);
+      }
     }
-
-    :deep(.el-switch__label.is-active) {
-      z-index: 11;
-      color: #409EFF;
-      font-weight: 600;
-      font-size: .14rem !important;
-    }
-
-    :deep(.el-switch__label *) {
-      font-size: .14rem !important;
-    }
-  }
-
-  .switchs :deep(.el-switch__core) {
-    background: #000 !important;
-    border-color: #000 !important;
   }
 
   .Menu {
