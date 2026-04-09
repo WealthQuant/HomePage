@@ -39,7 +39,7 @@
     "subtitle": "Comprehensive quantitative investment solutions powered by AI",
     "houseQuant": {
       "name": "HouseQuant",
-      "description": "Revolutionary real estate investment platform using quantitative analysis and AI-driven insights for smarter property decisions.",
+      "description": "We're bringing the quantitative revolution to real estate investing. Property investing today is often based on incomplete and inadequate information. Analysis, forecasts, and decisions are not rigorously produced, and are sometimes driven by emotion, untested assumptions, and rules of thumb. Portfolio considerations in real estate are often ignored. We work to improve real estate decision making. It can and should be evidence-based, data-driven, and systematic instead. We are leading the way forward by applying quantitative finance and data science methods to global real estate, helping investors beat the market.",
       "features": [
         "AI-Powered Property Valuation",
         "Market Trend Prediction",
@@ -48,7 +48,7 @@
     },
     "stockQuant": {
       "name": "StockQuant",
-      "description": "Advanced stock analysis platform combining technical and fundamental analysis with machine learning for optimal trading strategies.",
+      "description": "Committed to providing a full range of growth stock analysis and interpretation, with performance exceeds expectations and technical analysis in one accurate stock selection, market trend tracking and position dynamic management in one to control risk, quantitative automatic trading and instruction-based trigger in one to avoid psychological impact, to obtain excessive returns!",
       "features": [
         "Maximize Your Returns With Power of AI",
         "Automate Your Trading To Make Best Use of Time And Capital",
@@ -57,7 +57,7 @@
     },
     "collectibleQuant": {
       "name": "CollectibleQuant",
-      "description": "Comprehensive digital twin and valuation platform for collectibles, leveraging AI and blockchain technology for authentication and tracking.",
+      "description": "Folk ancient artworks are the most representative markers and carriers of Chinese culture and dissemination. With the help of artificial intelligence, blockchain, IoTs and other technologies, CollectibleQuant is committed to providing comprehensive scientific digital twin, collection tracing, collection identification and valuation quantification.",
       "features": [
         "AI-Powered Authentication",
         "Digital Twin Creation",

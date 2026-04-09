@@ -447,7 +447,7 @@ const { t } = useI18n()
   text-align: left;
   position: relative;
   z-index: 22;
-  flex: 1;
+  transform: translateY(-0.25rem);
 }
 
 .product-img-right {
@@ -470,7 +470,7 @@ const { t } = useI18n()
   width: 100%;
   position: relative;
   align-self: flex-end;
-  margin-top: 0.2rem;
+  margin-top: 1.5rem;
   z-index: 3;
 }
 
