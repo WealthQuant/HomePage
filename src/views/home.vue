@@ -38,7 +38,7 @@
 
     <!-- Section 5: text with gradient -->
     <div class="img-section img5">
-      <div class="bg-gradient"></div>
+      <img src="../assets/29.png" class="bg-full" alt="">
       <div class="text text-top" data-aos="fade-up">
         {{ t('mission.description') }}
       </div>
@@ -351,25 +351,26 @@ const { t } = useI18n()
 .img5 {
   position: relative;
 
-  .bg-gradient {
+  .bg-full {
     width: 100%;
-    height: 5.6rem;
-    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+    height: auto;
+    min-height: 5.6rem;
+    object-fit: cover;
   }
 
   // Override text-top for section 5
   .text.text-top {
     top: 0.8rem;
-    left: 12.5%;
-    width: 75%;
+    left: 25%;
+    width: 65%;
     font-size: 0.48rem;
   }
 
   // Override text-min for section 5
   .text-min.text-bottom {
     bottom: 0.8rem;
-    left: 12.5%;
-    width: 75%;
+    left: 25%;
+    width: 65%;
     font-size: 0.4rem;
   }
 }
