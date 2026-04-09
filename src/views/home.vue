@@ -204,12 +204,13 @@ const { t } = useI18n()
     }
 
     &-top-right {
-      top: 0.64rem;
+      top: 50%;
       right: 28%;
       width: 60%;
       text-align: right;
-      font-size: 0.28rem;
-      line-height: 1.4;
+      font-size: 0.65rem;
+      line-height: 1.3;
+      transform: translateY(-130%);
       animation: fadeInDown 1s ease-out;
     }
 
@@ -242,10 +243,17 @@ const { t } = useI18n()
     }
 
     &.text-bottom-right {
-      bottom: 0.64rem;
+      position: absolute;
+      top: 50%;
+      bottom: auto;
       right: 28%;
-      width: 60%;
+      width: 65%;
       text-align: right;
+      font-size: 0.4rem;
+      line-height: 1.2;
+      transform: translateY(30%);
+      opacity: 1;
+      transition: none;
     }
   }
 }
@@ -347,6 +355,22 @@ const { t } = useI18n()
     width: 100%;
     height: 5.6rem;
     background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+  }
+
+  // Override text-top for section 5
+  .text.text-top {
+    top: 0.8rem;
+    left: 12.5%;
+    width: 75%;
+    font-size: 0.48rem;
+  }
+
+  // Override text-min for section 5
+  .text-min.text-bottom {
+    bottom: 0.8rem;
+    left: 12.5%;
+    width: 75%;
+    font-size: 0.4rem;
   }
 }
 
