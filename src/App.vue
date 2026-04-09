@@ -14,13 +14,6 @@
         >
         <div class="name">
           <img
-            src="./assets/code/0002x.png"
-            class="name_bg"
-            alt="WealthQuant Background"
-            data-aos="fade-in"
-            data-aos-delay="200"
-          >
-          <img
             src="./assets/code/0003.png"
             class="name_text"
             alt="WealthQuant Logo Text"
@@ -30,10 +23,11 @@
           >
         </div>
         <div class="code">
-          <span
-            data-aos="fade-left"
-            data-aos-delay="600"
-          >{{ t('hero.slogan') }} !</span>
+          <TypewriterText
+            :text="t('hero.slogan') + ' !'"
+            :speed="80"
+            :delay="600"
+          />
           <div
             class="content"
             data-aos="fade-left"
@@ -53,6 +47,7 @@ import { onMounted, nextTick } from 'vue'
 import { useI18n } from 'vue-i18n'
 import AOS from 'aos'
 import Head from '@/components/Head.vue'
+import TypewriterText from '@/components/TypewriterText.vue'
 import { CONTACT } from '@/constants'
 
 const { t } = useI18n()
@@ -82,20 +77,32 @@ onMounted(() => {
 
   .first_screen {
     width: 100%;
+    height: 100vh;
     background: #F2F2F2;
+    display: flex;
+    flex-direction: column;
+    
     .header {
       z-index: 2;
+      flex-shrink: 0;
     }
+    
     .home {
       width: 100%;
-      height: 51vw;
-      background: hsl(221, 100%, 37%);
+      height: 100%;
+      flex: 1;
+      background: linear-gradient(to bottom, hsl(221, 100%, 37%) 0%, hsl(221, 100%, 60%) 60%, #f5f7fa 100%);
       z-index: 1;
       position: relative;
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
 
       .home_img {
         width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: saturate(1.3) contrast(1.1);
         transition: transform 0.6s ease;
 
         &:hover {
@@ -105,25 +112,18 @@ onMounted(() => {
 
       .name {
         width: 100%;
-        font-size: 12vw;
         color: #ffff;
         font-weight: 600;
         font-family: '-apple-system', "Microsoft YaHei", sans-serif;
         position: absolute;
         text-align: left;
-        bottom: 1rem;
-        background: linear-gradient(transparent, 75%, rgba(255, 255, 255, .4));
-
-        .name_bg {
-          position: absolute;
-          width: 100%;
-          bottom: 0;
-        }
+        bottom: 2rem;
+        left: 0;
 
         .name_text {
-          width: 80%;
-          position: absolute;
-          bottom: 0;
+          width: 60%;
+          max-width: 8rem;
+          position: relative;
           margin-left: .2rem;
           transition: transform 0.5s ease;
 
@@ -137,9 +137,9 @@ onMounted(() => {
     .code {
       width: 100%;
       height: 1rem;
-      padding-left: .32rem;
+      padding: 0 .32rem;
       box-sizing: border-box;
-      font-size: .24rem;
+      font-size: .22rem;
       font-family: ArialRoundedMTBold, "Microsoft YaHei", sans-serif;
       color: #FFFFFF;
       line-height: 1rem;
@@ -148,24 +148,31 @@ onMounted(() => {
       position: absolute;
       bottom: 0;
       background: #FF501E;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
 
       span {
         display: inline-block;
+        flex: 1;
+        font-size: .28rem;
       }
 
       .content {
-        float: right;
-        width: 1.92rem;
-        height: .64rem;
-        margin: .2rem;
+        flex-shrink: 0;
+        width: auto;
+        min-width: 1.92rem;
+        height: .48rem;
+        padding: 0 .16rem;
+        margin: 0;
         background: #000000;
         box-shadow: 0rem .08rem .16rem 0rem rgba(0, 0, 0, 0.4);
-        border-radius: .32rem;
-        font-size: .14rem;
+        border-radius: .24rem;
+        font-size: .12rem;
         font-family: ArialRoundedMTBold, "Microsoft YaHei", sans-serif;
         text-align: center;
         color: #FFFFFF;
-        line-height: .64rem;
+        line-height: .48rem;
         box-sizing: border-box;
         transition: all 0.3s ease;
 

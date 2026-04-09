@@ -1,7 +1,7 @@
 <template>
   <header
     class="head"
-    :style="{'background': headC}"
+    :class="{ 'glass-effect': showMenu }"
     role="banner"
   >
     <a
@@ -30,8 +30,11 @@
           aria-controls="mobile-menu"
           @click="toggleMenu(showMenu)"
         >
-          <i class="el-icon-s-unfold" />
-          <span class="menu-text">{{ t('accessibility.menu') }}</span>
+          <div class="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </button>
         <div
           class="lang-switch"
@@ -101,10 +104,8 @@ const toggleMenu = (isShow: boolean) => {
   showMenu.value = !isShow
   if (!isShow) {
     icon.value = 'rgba(255, 255, 255, .5)'
-    headC.value = '#000'
   } else {
     icon.value = '#fff'
-    headC.value = 'hsl(221, 100%, 37%)'
   }
 }
 
@@ -134,17 +135,22 @@ const toggleLanguage = () => {
 .head {
   width: 100%;
   height: .64rem;
-  background: hsl(221, 100%, 37%);
+  background: rgb(0, 59, 188);
   position: relative;
+  transition: all 0.3s ease;
+
+  &.glass-effect {
+    background: rgba(0, 71, 171, 0.85);
+  }
 
   .head-container {
-    max-width: 14rem;
-    margin: 0 auto;
+    width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 .2rem;
+    padding: 0 .2rem 0 .08rem;
+    box-sizing: border-box;
   }
 
   .left {
@@ -177,26 +183,31 @@ const toggleLanguage = () => {
     .menu-btn {
       display: flex;
       align-items: center;
-      gap: .06rem;
-      padding: .08rem .16rem;
-      background: rgba(255, 255, 255, 0.15);
+      justify-content: center;
+      padding: .08rem;
+      background: transparent;
       border: none;
-      border-radius: .08rem;
       cursor: pointer;
       transition: all 0.3s ease;
       color: #fff;
 
       &:hover {
-        background: rgba(255, 255, 255, 0.25);
+        opacity: 0.8;
       }
 
-      i {
-        font-size: .16rem;
-      }
+      .hamburger-icon {
+        display: flex;
+        flex-direction: column;
+        gap: .04rem;
 
-      .menu-text {
-        font-size: .14rem;
-        font-weight: 500;
+        span {
+          display: block;
+          width: .24rem;
+          height: .025rem;
+          background: currentColor;
+          border-radius: .01rem;
+          transition: all 0.3s ease;
+        }
       }
     }
 
@@ -237,19 +248,22 @@ const toggleLanguage = () => {
   }
 
   .Menu {
-    position: absolute;
-    float: left;
+    position: fixed;
     top: .64rem;
+    left: 0;
     width: 100%;
-    height: 7.04rem;
-    background: #000000;
-    z-index: 2;
+    height: calc(100vh - .64rem - 1rem);
+    background: rgba(0, 71, 171, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    z-index: 100;
     font-size: .48rem;
     font-family: ArialRoundedMTBold, "Microsoft YaHei", sans-serif;
     color: #FFFFFF;
     line-height: .48rem;
     padding: .4rem .8rem;
     box-sizing: border-box;
+    overflow-y: auto;
 
     li {
       height: 1.12rem;
