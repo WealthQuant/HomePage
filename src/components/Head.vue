@@ -83,7 +83,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 import { MENU_ITEMS } from '@/constants'
@@ -108,6 +108,21 @@ const toggleMenu = (isShow: boolean) => {
     icon.value = '#fff'
   }
 }
+
+const handleScroll = () => {
+  if (showMenu.value) {
+    showMenu.value = false
+    icon.value = 'rgba(255, 255, 255, .5)'
+  }
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
 
 const toggleLanguage = () => {
   locale.value = locale.value === 'zh' ? 'en' : 'zh'
@@ -140,7 +155,9 @@ const toggleLanguage = () => {
   transition: all 0.3s ease;
 
   &.glass-effect {
-    background: rgba(0, 71, 171, 0.85);
+    background: rgba(0, 59, 188, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
   }
 
   .head-container {
@@ -253,7 +270,7 @@ const toggleLanguage = () => {
     left: 0;
     width: 100%;
     height: calc(100vh - .64rem - 1rem);
-    background: rgba(0, 71, 171, 0.85);
+    background: rgba(0, 59, 188, 0.85);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     z-index: 100;

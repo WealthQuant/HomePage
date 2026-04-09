@@ -3,11 +3,13 @@
     <!-- Section 1: 25.png with text overlay -->
     <div class="img-section img1">
       <img src="../assets/25.png" class="bg-full" alt="">
-      <div class="text text-top" data-aos="fade-up">
-        {{ t('home.backgrounds.desc1') }}
-      </div>
-      <div class="text-min text-bottom" data-aos="fade-up" data-aos-delay="200">
-        {{ t('home.backgrounds.desc2') }}
+      <div class="text-group">
+        <div class="text-main" data-aos="fade-up">
+          {{ t('home.backgrounds.desc1') }}
+        </div>
+        <div class="text-accent" data-aos="fade-up" data-aos-delay="800">
+          {{ t('home.backgrounds.desc2') }}
+        </div>
       </div>
     </div>
 
@@ -189,7 +191,7 @@ const { t } = useI18n()
       top: 0.48rem;
       left: 28%;
       width: 60%;
-      font-size: 0.28rem;
+      font-size: 0.32rem;
       line-height: 1.4;
       animation: fadeInDown 1s ease-out;
     }
@@ -223,20 +225,78 @@ const { t } = useI18n()
   .text-min {
     position: absolute;
     font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'SF Pro Display', 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
-    font-weight: 500;
+    font-weight: 700;
     color: #FF501E;
-    font-size: 0.20rem;
-    line-height: 1.4;
-    animation: colorPulse 3s ease-in-out infinite;
+    font-size: 0.4rem;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+
+    &.text-bottom {
+      bottom: 2.8rem;
+      left: 28%;
+      width: 65%;
+      text-align: left;
+    }
+
+    &.text-bottom-right {
+      bottom: 0.64rem;
+      right: 28%;
+      width: 60%;
+      text-align: right;
+    }
+  }
+}
+
+// Section 1 specific (isolated)
+.img1 {
+  .text-group {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translateY(-50%);
+    width: 65%;
+    text-align: left;
+  }
+
+  .text-main {
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'SF Pro Display', 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    font-weight: 700;
+    color: #1a1a2e;
+    font-size: 0.4rem;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.8rem;
+    animation: fadeInDown 1s ease-out;
+  }
+
+  .text-accent {
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'SF Pro Display', 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    font-weight: 700;
+    color: #FF501E;
+    font-size: 0.4rem;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 0.6s forwards;
+  }
+
+  // Disable .text-min styles in section 1 since we use .text-group instead
+  .text-min {
+    display: none;
   }
 }
 
 // Section 2 specific
 .img2 {
+  position: relative;
   min-height: 43.75vw;
   overflow: visible;
 
   .bg-full {
+    width: 100%;
     height: auto;
     min-height: 43.75vw;
     object-fit: cover;
