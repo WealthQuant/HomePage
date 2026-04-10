@@ -556,8 +556,8 @@ const { t } = useI18n()
 
 .about-content {
   margin-left: 12.5%;
-  margin-right: 10%;
   margin-top: 2vw;
+  max-width: calc(100% - 22.5%);
   text-align: left;
 
   p {
