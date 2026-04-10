@@ -84,9 +84,7 @@
   "about": {
     "tag": "About Us",
     "title": "Who We Are",
-    "companyTitle": "About WealthQuant",
-    "description": "WealthQuant was founded in 2021. Our founding team worked at Baidu, Alibaba and financial firms with proven track records in building mission-critical machine learning systems.",
-    "backgrounds": "Our Backgrounds",
+    "description": "WealthQuant was founded in the middle of 2021 and the founding team used to work at Baidu, Alibaba and financial firms with a proven track record of building many mission-critical machine learning systems where billions of data points were processed in real-time to predict the best outcome for core search ranking, ads monetization, recommendations, and trading platforms. Our mission is to build machine investing solutions to find alpha with adaptive learning algorithms and to create an edge by assimilating vast quantities of complex data through the latest AI methods to generate signals to uncover hidden, dynamic, and nonlinear patterns in the financial markets, especially in real estate, stock market and collectible investment.",
     "cta": "Get in Touch"
   },
   "home": {

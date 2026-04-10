@@ -116,32 +116,28 @@
       <h2 class="section-title sub-title" data-aos="fade-up">{{ t('about.title') }}</h2>
 
       <div class="about-content" data-aos="fade-up">
-        <h4>{{ t('about.companyTitle') }}</h4>
         <p>{{ t('about.description') }}</p>
-      </div>
-
-      <h2 class="section-title sub-title" data-aos="fade-up">{{ t('about.backgrounds') }}</h2>
-
-      <div class="partners-row" data-aos="fade-up">
-        <div class="partner-logo baidu"></div>
-        <div class="partner-logo ali"></div>
-        <div class="partner-logo ten"></div>
-        <div class="partner-logo honeywell"></div>
-      </div>
-      <div class="partners-row" data-aos="fade-up" data-aos-delay="100">
-        <div class="partner-logo zhong"></div>
-        <div class="partner-logo kin"></div>
-        <div class="partner-logo qing"></div>
-        <div class="partner-logo hua"></div>
       </div>
     </div>
 
     <!-- Footer -->
     <footer class="footer">
       <div class="social-links">
-        <a href="#" class="social-icon"><i class="el-icon-s-promotion"></i></a>
-        <a href="#" class="social-icon">f</a>
-        <a href="#" class="social-icon"><i class="el-icon-s-grid"></i></a>
+        <a href="#" class="social-icon" aria-label="X (Twitter)">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+        </a>
+        <a href="#" class="social-icon" aria-label="Meta (Facebook)">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+        </a>
+        <a href="#" class="social-icon" aria-label="Telegram">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+            <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+          </svg>
+        </a>
       </div>
       <div class="footer-text">
         <p>{{ t('footer.copyright', { year: new Date().getFullYear() }) }}</p>
@@ -355,9 +351,9 @@ const { t } = useI18n()
 
   .bg-full {
     width: 100%;
-    height: auto;
-    min-height: 5.6rem;
+    height: 5.6rem;
     object-fit: cover;
+    display: block;
   }
 
   // Override text-top for section 5
@@ -503,8 +499,8 @@ const { t } = useI18n()
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2vw;
-  padding: 0 8%;
-  margin-top: 3vw;
+  padding: 0 10% 0 12.5%;
+  margin-top: 2vw;
   overflow: visible;
 }
 
@@ -512,7 +508,7 @@ const { t } = useI18n()
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 0.8rem;
+  gap: 0.4rem;
   overflow: visible;
 }
 
@@ -561,20 +557,16 @@ const { t } = useI18n()
 .about-content {
   margin-left: 12.5%;
   margin-top: 3vw;
-
-  h4 {
-    font-size: 0.22rem;
-    color: #1a1a2e;
-    margin-bottom: 0.16rem;
-    font-weight: 600;
-    letter-spacing: -0.01em;
-  }
+  text-align: left;
+  max-width: 45rem;
+  width: 90%;
 
   p {
-    width: 75%;
-    font-size: 0.15rem;
-    color: #5a5a6e;
-    line-height: 1.6;
+    width: 100%;
+    font-size: 0.18rem;
+    color: #4a4a5e;
+    line-height: 1.75;
+    text-align: left;
   }
 }
 
@@ -667,6 +659,18 @@ const { t } = useI18n()
   font-weight: 600;
   color: #fff;
   text-decoration: none;
+  transition: all 0.3s ease;
+
+  svg {
+    display: block;
+    width: 50%;
+    height: 50%;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
 }
 
 .footer-text {
