@@ -155,7 +155,6 @@ const toggleLanguage = () => {
   transition: all 0.3s ease;
 
   &.glass-effect {
-    background: rgba(0, 59, 188, 0.85);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
   }

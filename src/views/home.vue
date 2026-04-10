@@ -87,27 +87,29 @@
     <div class="why-section">
       <h2 class="section-title" data-aos="fade-up">{{ t('whyUs.title') }}</h2>
 
-      <div class="feature-item" data-aos="fade-right">
-        <div class="feature-icon lock"></div>
-        <div class="feature-content">
-          <h4>{{ t('whyUs.researchDriven.title') }}</h4>
-          <p>{{ t('whyUs.researchDriven.description') }}</p>
+      <div class="features-grid">
+        <div class="feature-item" data-aos="fade-up">
+          <img src="../assets/image/lock.png" class="feature-icon" alt="Research-Driven" />
+          <div class="feature-content">
+            <h4>{{ t('whyUs.researchDriven.title') }}</h4>
+            <p>{{ t('whyUs.researchDriven.description') }}</p>
+          </div>
         </div>
-      </div>
 
-      <div class="feature-item" data-aos="fade-right" data-aos-delay="100">
-        <div class="feature-icon pie-chart"></div>
-        <div class="feature-content">
-          <h4>{{ t('whyUs.aiBigData.title') }}</h4>
-          <p>{{ t('whyUs.aiBigData.description') }}</p>
+        <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
+          <img src="../assets/image/pie_chart.png" class="feature-icon" alt="AI & Big Data" />
+          <div class="feature-content">
+            <h4>{{ t('whyUs.aiBigData.title') }}</h4>
+            <p>{{ t('whyUs.aiBigData.description') }}</p>
+          </div>
         </div>
-      </div>
 
-      <div class="feature-item" data-aos="fade-right" data-aos-delay="200">
-        <div class="feature-icon server"></div>
-        <div class="feature-content">
-          <h4>{{ t('whyUs.engineering.title') }}</h4>
-          <p>{{ t('whyUs.engineering.description') }}</p>
+        <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+          <img src="../assets/image/server.png" class="feature-icon" alt="World-class Engineering" />
+          <div class="feature-content">
+            <h4>{{ t('whyUs.engineering.title') }}</h4>
+            <p>{{ t('whyUs.engineering.description') }}</p>
+          </div>
         </div>
       </div>
 
@@ -489,7 +491,7 @@ const { t } = useI18n()
   text-align: left;
   font-weight: 600;
   margin-left: 12.5%;
-  margin-top: 12.5vw;
+  margin-top: 4vw;
   letter-spacing: -0.02em;
 
   &.sub-title {
@@ -497,53 +499,58 @@ const { t } = useI18n()
   }
 }
 
-.feature-item {
-  overflow: hidden;
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2vw;
+  padding: 0 8%;
   margin-top: 3vw;
+  overflow: visible;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 0.8rem;
+  overflow: visible;
 }
 
 .feature-icon {
-  width: 12.5%;
-  height: 12.5vw;
-  margin-left: 12.5%;
-  float: left;
-  background-size: 50%;
-  background-repeat: no-repeat;
-  background-position: center;
-
-  &.lock {
-    background-image: url(../assets/image/lock.png);
-  }
-
-  &.pie-chart {
-    background-image: url(../assets/image/pie_chart.png);
-  }
-
-  &.server {
-    background-image: url(../assets/image/server.png);
-  }
+  max-width: 80px;
+  max-height: 80px;
+  width: auto;
+  height: auto;
+  flex-shrink: 0;
+  object-fit: contain;
+  display: block;
+  border-radius: 0 !important;
+  clip-path: none !important;
+  mask: none !important;
+  -webkit-mask: none !important;
+  overflow: visible !important;
+  border: none !important;
 }
 
 .feature-content {
-  float: left;
-  margin-left: 2.5vw;
+  flex: 1;
+  min-width: 0;
 
   h4 {
-    font-size: 0.22rem;
-    width: 60%;
+    font-size: 0.2rem;
     font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'SF Pro Display', 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
     color: #1a1a2e;
     line-height: 1.3;
     margin-top: 0;
+    margin-bottom: 0.8vw;
     text-align: left;
     font-weight: 600;
     letter-spacing: -0.01em;
   }
 
   p {
-    margin-top: 1.4vw;
-    width: 60%;
-    font-size: 0.15rem;
+    margin-top: 0;
+    font-size: 0.14rem;
     font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'SF Pro Display', 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
     color: #5a5a6e;
     line-height: 1.6;
@@ -761,15 +768,20 @@ const { t } = useI18n()
     border-radius: 8vw;
   }
 
-  .feature-icon {
-    width: 20%;
-    margin-left: 5%;
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 4vw;
+    padding: 0 5%;
   }
 
-  .feature-content {
-    h4, p {
-      width: 70%;
-    }
+  .feature-item {
+    flex-direction: row;
+    gap: 1.2vw;
+  }
+
+  .feature-icon {
+    width: 2.5rem;
+    height: 2.5rem;
   }
 
   .partners-row {
