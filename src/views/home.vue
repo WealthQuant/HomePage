@@ -348,6 +348,8 @@ const { t, locale } = useI18n()
 // Section 5 specific
 .img5 {
   position: relative;
+  min-height: 3.5rem;
+  background: #f5f5f5;
 
   .bg-full {
     width: 100%;
@@ -358,7 +360,7 @@ const { t, locale } = useI18n()
 
   // Override text-top for section 5
   .text.text-top {
-    top: 0.8rem;
+    top: 1.5rem;
     left: 25%;
     width: 65%;
     font-size: 0.48rem;
@@ -366,10 +368,12 @@ const { t, locale } = useI18n()
 
   // Override text-min for section 5
   .text-min.text-bottom {
-    bottom: 0.8rem;
+    bottom: 1rem;
     left: 25%;
     width: 65%;
     font-size: 0.4rem;
+    opacity: 1;
+    transform: none;
   }
 }
 
