@@ -33,7 +33,7 @@
             data-aos="fade-left"
             data-aos-delay="800"
           >
-            {{ contactPhone }}
+            {{ t('hero.contact') }}
           </div>
         </div>
       </div>
@@ -48,10 +48,8 @@ import { useI18n } from 'vue-i18n'
 import AOS from 'aos'
 import Head from '@/components/Head.vue'
 import TypewriterText from '@/components/TypewriterText.vue'
-import { CONTACT } from '@/constants'
 
 const { t } = useI18n()
-const contactPhone = CONTACT.phone
 
 onMounted(() => {
   nextTick(() => {
@@ -161,18 +159,18 @@ onMounted(() => {
       .content {
         flex-shrink: 0;
         width: auto;
-        min-width: 1.92rem;
-        height: .48rem;
-        padding: 0 .16rem;
+        min-width: 1.6rem;
+        height: .4rem;
+        padding: 0 .12rem;
         margin: 0;
         background: #000000;
         box-shadow: 0rem .08rem .16rem 0rem rgba(0, 0, 0, 0.4);
-        border-radius: .24rem;
-        font-size: .12rem;
+        border-radius: .2rem;
+        font-size: .11rem;
         font-family: ArialRoundedMTBold, "Microsoft YaHei", sans-serif;
         text-align: center;
         color: #FFFFFF;
-        line-height: .48rem;
+        line-height: .4rem;
         box-sizing: border-box;
         transition: all 0.3s ease;
 

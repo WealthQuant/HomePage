@@ -141,7 +141,7 @@
       </div>
       <div class="footer-text">
         <p>{{ t('footer.copyright', { year: new Date().getFullYear() }) }}</p>
-        <div class="beian">
+        <div v-if="locale === 'zh'" class="beian">
           <a :href="BEIAN.gongan.url" target="_blank">
             <img src="../assets/beian.png" alt="">
             <span>{{ BEIAN.gongan.text }}</span>
@@ -157,7 +157,7 @@
 import { useI18n } from 'vue-i18n'
 import { BEIAN } from '@/constants'
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
 </script>
 
 <style scoped lang="less">
@@ -383,15 +383,15 @@ const { t } = useI18n()
 .product-item {
   width: 90%;
   max-width: 9.6rem;
-  min-height: 9.6rem;
   margin: 1.28rem auto 0;
   background: rgba(255, 255, 255, 0.1);
   box-shadow: 0 0.16rem 0.32rem rgba(0, 0, 0, 0.1);
-  border-radius: 12vw;
+  border-radius: 8vw;
   position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  padding-top: 2.6rem;
 
   &:last-child {
     margin-bottom: 1.28rem;
@@ -399,15 +399,21 @@ const { t } = useI18n()
 }
 
 .product-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   align-items: center;
-  padding: 5%;
+  padding: 0.7rem 5% 0.6rem;
+  gap: 5%;
+  z-index: 20;
+  background: inherit;
 }
 
 .product-icon {
   width: 1.6rem;
   height: 1.6rem;
-  margin-right: 5%;
   box-shadow: 0 0 0.16rem rgba(0, 0, 0, 0.2);
   border-radius: 50%;
   flex-shrink: 0;
@@ -434,6 +440,10 @@ const { t } = useI18n()
   color: #fff;
   font-weight: 600;
   letter-spacing: -0.01em;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+  flex: 1;
 }
 
 .product-desc {
@@ -445,8 +455,11 @@ const { t } = useI18n()
   margin-left: 8%;
   text-align: left;
   position: relative;
-  z-index: 22;
-  transform: translateY(-0.25rem);
+  z-index: 10;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .product-img-right {
@@ -454,7 +467,7 @@ const { t } = useI18n()
   position: absolute;
   right: 0;
   bottom: 0;
-  border-radius: 0 0 12vw 0;
+  z-index: 1;
 }
 
 .product-img-center {
@@ -462,7 +475,7 @@ const { t } = useI18n()
   position: absolute;
   left: 10%;
   bottom: -1vw;
-  z-index: 2;
+  z-index: 1;
 }
 
 .product-img-bottom {
@@ -470,7 +483,7 @@ const { t } = useI18n()
   position: relative;
   align-self: flex-end;
   margin-top: 1.5rem;
-  z-index: 3;
+  z-index: 1;
 }
 
 // Why Us section
